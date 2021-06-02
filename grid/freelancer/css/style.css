@@ -1,0 +1,143 @@
+:root {
+  --fuentePrincipal:  'Gothic A1', sans-serif;
+  --fuenteSecundaria: 'Oswald', sans-serif;
+  --primario: #f1a94e;
+  --secundario: #44b3c2;
+  --claro: #ffffff;
+  --oscuro: #5b5b5b;
+}
+
+body {
+  font-family: var(--fuenteSecundaria);
+}
+
+.contenedor {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* hero */
+.hero {
+  height: 100vh;
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .contenedor {
+  height: 100%;
+  display: grid;
+  align-content: center;
+}
+
+.hero .contenido {
+  text-align: center;
+  color: var(--claro);
+}
+
+.hero .titulo  {
+  margin: 0;
+}
+
+.hero .subtitulo  {
+  font-size: 1.6rem;
+}
+
+/* servicios */
+.servicios {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.servicios h2 {
+  padding-bottom: .5rem;
+}
+
+.servicios h2::after {
+  height: .5rem;
+  width: 7rem;
+  background-color: var(--primario);
+  content: '';
+  display: block;
+  margin: 1rem auto 0 auto;
+}
+
+.servicios i {
+  font-size: 3rem;
+  color: var(--secundario);
+}
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 2rem;
+  }
+}
+
+/* portafolio */
+.elemento {
+  border-bottom: 1px solid var(--oscuro);
+  margin-bottom: 3rem;
+}
+
+.elemento:last-of-type {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .listado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-auto-rows: max-content;
+  }
+
+  .elemento {
+    border: none;
+  }
+
+  .elemento:nth-child(3) {
+    grid-row-end: span 2;
+  }
+}
+
+/* footer */
+.footer {
+  background-image: url(../img/contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--claro);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .footer .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 30%) auto;
+  }
+}
